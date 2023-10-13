@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PORTFOLIO</title>
+</head>
+<body style="background-color:Cornsilk;font-family:garamond,serif;color:Crimson;text-align:center;">
+<h2 style="font-size:170%;">PORTFOLIO<h2>
+<h3 style="font-size:150%;"><i>of Nivethitha</i><h3>
+<nav>
+<button onclick="www.google.com">Contact</button>   |
+<button onclick="www.google.com">Education</button>   |
+<button onclick="www.google.com">Educational proof documents</button>   |
+<button onclick="www.google.com">Verification documents</button>   
+<button onclick="www.google.com">
+</nav>
+
+<style>
+.portfolio{
+background-color:Lavender;
+color:black;
+font-family:garamond,serif;
+font-size:110%;
+border:2px solid black;
+margin:20px;
+padding:20px;
+}
+</style>
+<div class="portfolio">
+<h3 style="font-style:garmanond, serif;color:Sienna";font-size:90%><i>"an aspiring developer in Python, with good technical knowledge,team spirit and communication skills"</i><h3>
+
+<pre style="color:black;font-size:85%;">
+Name : Nivethitha K R
+
+DOB: 12 September 2002
+
+Address: No.5/320, Ambal Nagar, Karur.
+
+Contact no.: 9790605168
+
+Education Details:
+ 
+>> 10th: Percentage: 87.4
+	 School: Bharani Vidhyalaya, CBSE school, Karur.
+
+>> 12th: Percentage: 80.8
+	 School: Bharani Vidhyalaya, CBSE school, Karur.
+
+>> UG: CGPA:8.31
+       College: Sri Shakthi Institute Of Engineering and Technology, Coimbatore.
+
+Projects: Food delivery system using Python, mySQL.
+	  Basic portfolio website using HTML,CSS.
+
+Languages: Tamil, English
+
+
+</pre>
