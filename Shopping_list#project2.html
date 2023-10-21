@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #addIt{
+      display: flex;
+      flex-wrap:wrap;
+      justify-content: center;
+      flex-direction:right;
+      }
+      #addIt p{
+        background-image: linear-gradient(to right,rgb(248, 236, 65),rgb(174, 175, 228));
+        width:auto;
+        height:auto;
+        margin:5px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 2px solid rgb(255, 255, 255);
+      }
+      .flow {
+        display:flex;
+        justify-content: center;
+        text-align:center;
+      }
+      .fix {
+        display:flex;
+        justify-content: center;
+        text-align:center;
+      }
+      @media (max-width: 600px) {
+          body {
+              height: 500%;
+              width:100%;
+          }
+      }
+    </style>
+  </head>
+<script>
+  arr=[]
+  const w=arr;
+  let num=1;
+  const check= /^[A-Za-z]+$/;
+  function add() {
+    const it=document.getElementById("item").value;
+    const vv=document.createElement("p");
+    vv.innerHTML= it;
+    arr.push(it);
+    if (it.length<1){
+		    window.alert("Please enter valid item name");
+		}
+    else if (!it.match(check)) {
+      window.alert("Please enter valid input containing alphabets");
+      document.getElementById("item").value="";
+    }
+    else {
+      document.getElementById("addIt").appendChild(vv);
+      document.getElementById("item").value="";
+      console.log(arr);
+      console.log(w);
+    }
+  }
+	function dell(){
+		var delth=document.getElementById("del").value;
+		var elem=arr.indexOf(delth);
+    document.getElementById("del").value="";
+    if (elem>-1) {
+      arr.splice(elem,1);
+      document.getElementById("addIt").innerHTML="";
+      for (i=0 ;i<w.length; i++){
+        const dd=arr[i];
+        const bb=document.createElement("p");
+        bb.innerHTML=dd;
+        document.getElementById("addIt").appendChild(bb);
+      }
+    }
+    else if (!delth.match(check)) {
+      window.alert("Please enter valid input containing alphabets");
+    }
+    console.log(arr);
+    console.log(w);
+  }
+</script>
+
+<body style="background-color:rgb(166, 235, 160)">
+  <h3 style="text-align:center;font-size:150%;"><i>Welcome to coco shopping </i></h3>
+  <p style="text-align:center;font-size:100%;"> Enter your items below</p>
+  <div class="flow">
+    <label border:2px blueviolet for="item">Item:</label>
+    <input type="text" id="item" placeholder="Enter item" name="item" autocomplete="off">
+    <button onclick=add()>Add item</button>
+  </div>
+  <br>
+  <div class="fix">
+    <label border:2px solid black for="del">Delete:</label>
+    <input type="text" id="del" placeholder="Enter item name to delete" name="del" autocomplete="off" >
+    <button onclick=dell()>Delete</button>
+  </div>
+  <div id="addIt">
+  </div>
+  <div id="delit">
+  </div>
+</body>
+</html>
